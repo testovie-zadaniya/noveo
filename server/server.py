@@ -11,8 +11,6 @@ logging.getLogger("werkzeug").setLevel(logging.WARNING)
 def one_minute_nobrainer():
     try:
         expr = request.args.get('expr')
-#	out = expr
-#	out = str(numexpr.evaluate(expr))
         print(numexpr.evaluate(expr), file=sys.stdout)
         return '', 204
     except:
